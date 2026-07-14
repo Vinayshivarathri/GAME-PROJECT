@@ -3,7 +3,6 @@ let serverscore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-
 const userscorepara = document.querySelector("#user-score");
 const serverscorepara = document.querySelector("#server-score");
 
@@ -15,7 +14,7 @@ const genserverchoice = () => {
 
 const drawgame = () => {
     msg.innerText = "Game was a draw, play again";
-    msg.style.backgroundColor = "black";
+    msg.style.backgroundColor = "#081b31";
 };
 
 const showwinner = (userwin, userchoice, serverchoice) => {
