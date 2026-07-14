@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* * {
     margin: 0;
     padding: 0;
@@ -107,4 +108,115 @@ img {
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+=======
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+.container {
+    height: 70vh;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+       align-items: center;
+  
+}
+
+.Game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+       align-items: center;
+       gap: 1.5vmin;
+}
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    font-size: 8vmin;
+
+}
+#reset-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5rem;
+    color: white;
+    background-color: black;
+    border: none;
+} */
+
+*{
+   margin: 0;
+   padding: 0;   
+}
+
+h1{
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+}
+.choice:hover {
+    cursor: pointer;
+    background-color: #081b31;
+}
+.choice {
+     height: 165px;
+     width: 165px;
+     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+         height: 150px;
+     width: 150px;
+     border-radius: 50%;
+     object-fit: cover;
+      
+}
+.choices {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 3rem;margin-top: 5rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+#user-score,
+ #server-score {
+    font-size: 4rem;
+}
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#msg {
+    font-size: 2rem;
+    background-color: #081b31;
+    color: #fff;
+    margin-top: 3rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+>>>>>>> 07a7cd3d7766276f21cc5cd9df110debb1cfa515
 }
