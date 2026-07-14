@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,3 +66,72 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissor Game</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+     <!-- <main>
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+        <div class="Game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+     </div>
+     <button id="reset-btn">reset Game</button>
+     </main> -->
+     <h1> Rock paper scissor Game</h1>
+     <div class="choices">
+     <div class="choice" id="Rock">
+        <img src="rock.png"  alt="Rock">
+     </div>
+      <div class="choice" id="paper">
+        <img src="paper.png"  alt="Paper">
+     </div>
+      <div class="choice" id="scissors">
+        <img src="scissors.png" alt="Scissors">
+     </div>
+     </div>
+
+
+     <div class="scoreboard">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>you</p>
+        </div>
+          <div class="score">
+            <p id="server-score">0</p>
+            <p>server</p>
+        </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg"> make a move</p>
+        </div>
+     
+     <script src="app.js"></script>
+     <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js")
+      .then(() => console.log("Service Worker Registered"));
+  }
+</script>
+
+</body>
+</html>
+>>>>>>> ce3b772ee86f8e139a78857a9d37dacc61e63364
