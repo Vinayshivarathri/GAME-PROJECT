@@ -1,136 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock paper scissor Game</title>
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="manifest" href="manifest.json">
-
 </head>
 <body>
-     <!-- <main>
-        <h1>Tic Tac Toe</h1>
-        <div class="container">
-        <div class="Game">
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
+    <h1>Rock Paper Scissors Game</h1>
+    
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="rock.png" alt="Rock"/>
         </div>
-     </div>
-     <button id="reset-btn">reset Game</button>
-     </main> -->
-     <h1> Rock paper scissor Game</h1>
-     <div class="choices">
-     <div class="choice" id="Rock">
-        <img src="./Images/rock.png"/>
-     </div>
-      <div class="choice" id="paper">
-        <img src="./Images/paper.png"/>
-     </div>
-      <div class="choice" id="scissors">
-        <img src="./Images/scissors.png"/>
-     </div>
-     </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="Paper"/>
+        </div>
+        <div class="choice" id="scissors">
+            <img src="scissors.png" alt="Scissors"/>
+        </div>
+    </div>
 
-
-     <div class="scoreboard">
+    <div class="scoreboard">
         <div class="score">
             <p id="user-score">0</p>
-            <p>you</p>
+            <p>You</p>
         </div>
-          <div class="score">
-            <p id="server-score">0</p>
-            <p>server</p>
-        </div>
-        </div>
-
-        <div class="msg-container">
-            <p id="msg"> make a move</p>
-        </div>
-     
-     <script src="app.js"></script>
-     <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js")
-      .then(() => console.log("Service Worker Registered"));
-  }
-</script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock paper scissor Game</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="manifest" href="manifest.json">
-
-</head>
-<body>
-     <!-- <main>
-        <h1>Tic Tac Toe</h1>
-        <div class="container">
-        <div class="Game">
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-        </div>
-     </div>
-     <button id="reset-btn">reset Game</button>
-     </main> -->
-     <h1> Rock paper scissor Game</h1>
-     <div class="choices">
-     <div class="choice" id="Rock">
-        <img src="rock.png"  alt="Rock">
-     </div>
-      <div class="choice" id="paper">
-        <img src="paper.png"  alt="Paper">
-     </div>
-      <div class="choice" id="scissors">
-        <img src="scissors.png" alt="Scissors">
-     </div>
-     </div>
-
-
-     <div class="scoreboard">
         <div class="score">
-            <p id="user-score">0</p>
-            <p>you</p>
-        </div>
-          <div class="score">
             <p id="server-score">0</p>
-            <p>server</p>
+            <p>Server</p>
         </div>
-        </div>
+    </div>
 
-        <div class="msg-container">
-            <p id="msg"> make a move</p>
-        </div>
+    <div class="msg-container">
+        <p id="msg">Make a move!</p>
+    </div>
      
-     <script src="app.js"></script>
-     <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js")
-      .then(() => console.log("Service Worker Registered"));
-  }
-</script>
-
+    <script src="app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+                .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
 </body>
 </html>
