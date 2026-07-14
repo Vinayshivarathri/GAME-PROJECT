@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="Images/rock.png" alt="Rock"/>
+        </div>
+        <div class="choice" id="paper">
+            <img src="Images/paper.png" alt="Paper"/>
+        </div>
+        <div class="choice" id="scissors">
+            <img src="Images/scissors.png" alt="Scissors"/>
+        </div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="server-score">0</p>
+            <p>Server</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">Make a move!</p>
+    </div>
+     
+    <script>
+        let userscore = 0;
+        let serverscore = 0;
+
+        const choices = document.querySelectorAll(".choice");
+        const msg = document.querySelector("#msg");
+        const userscorepara = document.querySelector("#user-score");
+        const serverscorepara = document.querySelector("#server-score");
+
+        const genserverchoice = () => {
+            const options = ["rock", "paper", "scissors"];
+            const randomIdx = Math.floor(Math.random() * 3);
+            return options[randomIdx];
+        };
+
+        const drawgame = () => {
+            msg.innerText = "Game was a draw, play again";
+            msg.style.backgroundColor = "#081b31";
+        };
+
+        const showwinner = (userwin, userchoice, serverchoice) => {
+            if (userwin) {
+                userscore++;
+                userscorepara.innerText = userscore;
+                msg.innerText = `You win! ${userchoice} beats ${serverchoice}`;
+                msg.style.backgroundColor = "green";
+            } else {
+                serverscore++;
+                serverscorepara.innerText = serverscore;
+                msg.innerText = `You lost! ${serverchoice} beats your ${userchoice}`;
+                msg.style.backgroundColor = "red";
+            }
+        };
+
+        const playgame = (userchoice) => {
+            console.log("user choice =", userchoice);
+            const serverchoice = genserverchoice();
+            console.log("serverchoice =", serverchoice);
+
+            if (userchoice === serverchoice) {
+                drawgame();
+            } else {
+                let userwin = true;
+                if (userchoice === "rock") {
+                    userwin = serverchoice === "paper" ? false : true;
+                } else if (userchoice === "paper") {
+                    userwin = serverchoice === "scissors" ? false : true;
+                } else if (userchoice === "scissors") {
+                    userwin = serverchoice === "rock" ? false : true;
+                }
+                showwinner(userwin, userchoice, serverchoice);
+            }
+        };
+
+        choices.forEach((choice) => {
+            choice.addEventListener("click", () => {
+                const userchoice = choice.getAttribute("id");
+                playgame(userchoice);
+            });
+        });
+    </script>
+</body>
+</html>
